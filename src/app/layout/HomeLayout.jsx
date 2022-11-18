@@ -5,7 +5,6 @@ import { BiLogIn, BiLogOut } from "react-icons/bi";
 import { ImUserPlus } from "react-icons/im";
 import pelota from "/pelota.svg";
 import { getFixture, logout } from "../../store/appSlice";
-import axios from "axios";
 import styles from "./styles.module.scss";
 import { useFixture } from "../../hooks/useFixture";
 
