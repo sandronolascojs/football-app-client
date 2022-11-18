@@ -12,7 +12,7 @@ export const useLogin = (reset) => {
     dispatch(isChecking());
 
     await axios
-      .post(`${import.meta.env.VITE_BACKEND}/api/v1/auth/login`, data)
+      .post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth/login`, data)
       .then(async (data) => {
         await swal.fire("Success!", "Welcome to OneFootball!", "success");
 

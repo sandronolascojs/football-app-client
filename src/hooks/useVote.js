@@ -11,7 +11,7 @@ export const useVote = () => {
 
   const vote = async (nCountry) => {
     await axios
-      .get(`${import.meta.env.VITE_BACKEND}/api/v1/matchs`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/v1/matchs`)
       .then(async (data) => {
         let currentMatch = { rawDate: new Date().toLocaleDateString };
         data.data.data.forEach((match) => {
@@ -26,7 +26,7 @@ export const useVote = () => {
         };
 
         await axios
-          .post(`${import.meta.env.VITE_BACKEND}/api/v1/votes`, finalData, {
+          .post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/votes`, finalData, {
             headers: {
               Authorization: "Bearer " + localStorage.getItem("x-token"),
             },

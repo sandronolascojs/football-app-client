@@ -45,7 +45,7 @@ export const useRegister = (reset) => {
     const dataToSend = { ...data, ip, location, country };
 
     await axios
-      .post(`${import.meta.env.VITE_BACKEND}/api/v1/auth`, dataToSend)
+      .post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/auth`, dataToSend)
       .then(async (data) => {
         const {
           data: { data: dataF },

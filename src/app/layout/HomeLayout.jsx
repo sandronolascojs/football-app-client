@@ -5,7 +5,6 @@ import { BiLogIn, BiLogOut } from "react-icons/bi";
 import { ImUserPlus } from "react-icons/im";
 import pelota from "/pelota.svg";
 import { getFixture, logout } from "../../store/appSlice";
-import axios from "axios";
 import styles from "./styles.module.scss";
 import { useFixture } from "../../hooks/useFixture";
 
@@ -41,17 +40,7 @@ export const HomeLayout = ({ children }) => {
         <div className={styles.second}>
           <ul>
             <li>
-              <NavLink
-                style={({ isActive }) => {
-                  return {
-                    display: "block",
-                    borderBottom: isActive ? "red" : "",
-                  };
-                }}
-                to="/home"
-              >
-                Home
-              </NavLink>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>
               <NavLink to="/ranking">Ranking</NavLink>
@@ -60,17 +49,7 @@ export const HomeLayout = ({ children }) => {
               <NavLink to="/teams">Teams</NavLink>
             </li>
             <li>
-              <NavLink
-                style={({ isActive }) => {
-                  return {
-                    display: "block",
-                    borderBottom: isActive ? "red" : "",
-                  };
-                }}
-                to="/account"
-              >
-                Account
-              </NavLink>
+              <NavLink to="/account">Account</NavLink>
             </li>
           </ul>
         </div>
