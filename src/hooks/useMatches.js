@@ -12,7 +12,7 @@ export const useMatches = () => {
         currentMatch = match;
       }
     });
-
+    
     setNextMatch(currentMatch);
     
   }, [fixture]);

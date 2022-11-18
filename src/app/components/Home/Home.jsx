@@ -1,9 +1,15 @@
 import fifa from "/fifa_world.png";
-import { useMatches } from "../../../hooks";
+import { useMatches, useVote } from "../../../hooks";
 import styles from "./styles.module.scss";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const { nextMatch } = useMatches();
+
+  const { vote } = useVote();
+
+  const goToVote = () => {};
 
   return (
     <div
@@ -67,6 +73,9 @@ export const Home = () => {
             </figure>
             <span>17:00pm</span>
           </div>
+        </div>
+        <div className={styles.vote}>
+          <Link to="/home/vote">Vote here!</Link>
         </div>
       </div>
     </div>
