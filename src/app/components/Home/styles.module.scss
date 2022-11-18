@@ -1,0 +1,87 @@
+.containerHome {
+  width: 90%;
+  min-height: calc(100vh - 4rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0 auto;
+  .first {
+    figure {
+      margin: 0;
+      text-align: center;
+      img {
+        width: 80%;
+      }
+    }
+  }
+  .second {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
+    // height: 15rem;
+    .firstCard,
+    .secondCard {
+      color: #fff;
+      text-align: start;
+      background-color: rgba(30, 30, 30, 0.9);
+      border-radius: 1rem;
+      padding: 1rem;
+      margin: 1rem;
+      width: 13rem;
+    }
+    .firstCard {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-around;
+      .teams {
+        margin: 1rem 0;
+        text-align: center;
+      }
+      .infoTeam {
+        display: flex;
+        flex-flow: column wrap;
+        width: fit-content;
+        margin: 0 auto;
+        .team {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          figure {
+            img {
+              width: 2.5rem;
+              height: 1.5rem;
+            }
+          }
+          span {
+            margin-left: 0.5rem;
+          }
+        }
+        .vs {
+          text-align: center;
+          margin: 0.4rem 0;
+        }
+      }
+    }
+    .secondCard {
+      padding-left: 1rem;
+      display: flex;
+      flex-flow: column wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .containerHome {
+    grid-template-columns: 1fr;
+    .first {
+      figure {
+        img {
+          width: 95%;
+        }
+      }
+    }
+  }
+}
