@@ -63,9 +63,7 @@ export const Verify = () => {
         return async () => {
             const token = window.location.href.split('token=')[1]
             setToken(token)
-            const url = window.location.href.split('?')[0]
             
-
             const replyFromVerifyEmail = await verifyEmail(token)
             if (replyFromVerifyEmail.error) {
                 setError(true)
